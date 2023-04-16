@@ -3,7 +3,7 @@ const router = require("express").Router();
 const {
   getThoughts,
   getOneThought,
-  addThought,
+  createThought,
   updateThought,
   deleteThought,
   addReaction,
@@ -11,7 +11,7 @@ const {
 } = require("../../controllers/thoughtController.js");
 
 // http://localhost:3001/api/thoughts
-router.route("/").get(getThoughts).post(addThought);
+router.route("/").get(getThoughts).post(createThought);
 
 // http://localhost:3001/api/thoughts/:thoughtId
 router
